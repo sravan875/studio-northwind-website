@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Start a conversation with Studio Northwind about your next brand, digital, packaging or editorial project.">
+  <meta name="theme-color" content="#fafaf7"><title>Contact — Studio Northwind</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2311110f'/><circle cx='16' cy='16' r='6' fill='%23b0432b'/></svg>">
+  <link rel="stylesheet" href="style.css"><script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Studio Northwind home">northwind<span>®</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation"><a href="work.html">Work</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a></nav>
+  </header>
+  <main id="main">
+    <section class="page-hero page-wrap"><p class="eyebrow">The first step is a note</p><h1>Tell us what’s<br><span>on your mind.</span></h1><p class="lede">A new idea, a knotty challenge, a question over coffee. We’re listening.</p></section>
+    <section class="contact-section page-wrap two-column">
+      <div class="contact-details">
+        <p class="eyebrow">Find the studio</p><h2>Portland, Oregon<br><span>and everywhere.</span></h2>
+        <address>Studio Northwind<br>1124 SE Division Street<br>Portland, OR 97202</address>
+        <p><a href="mailto:hello@studionorthwind.example">hello@studionorthwind.example</a><br><a href="tel:+15035550148">+1 503 555 0148</a></p>
+        <p class="hours"><span>Studio hours</span><br>Monday—Friday, 9am—5pm PT</p>
+      </div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-field"><label for="full-name">Full name <span aria-hidden="true">*</span></label><input id="full-name" name="name" autocomplete="name" required aria-describedby="name-error"><p class="field-error" id="name-error" role="alert"></p></div>
+        <div class="form-field"><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error"><p class="field-error" id="email-error" role="alert"></p></div>
+        <div class="form-field"><label for="phone">Phone <span class="optional">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error"><p class="field-error" id="phone-error" role="alert"></p></div>
+        <div class="form-field"><label for="service">What can we help with? <span aria-hidden="true">*</span></label><select id="service" name="service" required aria-describedby="service-error"><option value="">Choose a service</option><option>Brand strategy</option><option>Visual identity</option><option>Web design</option><option>Packaging</option><option>Motion</option><option>Editorial</option><option>Something else</option></select><p class="field-error" id="service-error" role="alert"></p></div>
+        <div class="form-field"><label for="budget">Budget range <span aria-hidden="true">*</span></label><select id="budget" name="budget" required aria-describedby="budget-error"><option value="">Choose a range</option><option>$5k–$15k</option><option>$15k–$30k</option><option>$30k–$60k</option><option>$60k+</option><option>Not sure yet</option></select><p class="field-error" id="budget-error" role="alert"></p></div>
+        <div class="form-field"><label for="message">A little about your project <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" required aria-describedby="message-hint message-error"></textarea><p class="field-hint" id="message-hint">At least 20 characters, please.</p><p class="field-error" id="message-error" role="alert"></p></div>
+        <div class="form-field consent-field"><label for="consent"><input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error"><span>I’m happy for Studio Northwind to contact me about this enquiry. <span aria-hidden="true">*</span></span></label><p class="field-error" id="consent-error" role="alert"></p></div>
+        <button class="button button-dark submit-button" type="submit">Send your note <span aria-hidden="true">↗</span></button>
+        <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Thanks for reaching out. Your note is ready for our studio team—we’ll be in touch soon.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="index.html">northwind<span>®</span></a><p>Independent by nature. Better together.</p><p>© <span data-year>2026</span> Studio Northwind</p></footer>
+</body>
+</html>
