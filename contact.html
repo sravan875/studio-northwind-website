@@ -5,7 +5,9 @@
   <meta name="description" content="Start a conversation with Studio Northwind about your next brand, digital, packaging or editorial project.">
   <meta name="theme-color" content="#fafaf7"><title>Contact — Studio Northwind</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2311110f'/><circle cx='16' cy='16' r='6' fill='%23b0432b'/></svg>">
-  <link rel="stylesheet" href="style.css"><script type="module" src="main.js"></script>
+  <link rel="stylesheet" href="contact.css">
+  <script type="module" src="main.js"></script>
+  <script type="module" src="contact.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -31,8 +33,9 @@
         <div class="form-field"><label for="budget">Budget range <span aria-hidden="true">*</span></label><select id="budget" name="budget" required aria-describedby="budget-error"><option value="">Choose a range</option><option>$5k–$15k</option><option>$15k–$30k</option><option>$30k–$60k</option><option>$60k+</option><option>Not sure yet</option></select><p class="field-error" id="budget-error" role="alert"></p></div>
         <div class="form-field"><label for="message">A little about your project <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" required aria-describedby="message-hint message-error"></textarea><p class="field-hint" id="message-hint">At least 20 characters, please.</p><p class="field-error" id="message-error" role="alert"></p></div>
         <div class="form-field consent-field"><label for="consent"><input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error"><span>I’m happy for Studio Northwind to contact me about this enquiry. <span aria-hidden="true">*</span></span></label><p class="field-error" id="consent-error" role="alert"></p></div>
+        <p class="field-hint">Demo form: your message is not sent or stored.</p>
         <button class="button button-dark submit-button" type="submit">Send your note <span aria-hidden="true">↗</span></button>
-        <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Thanks for reaching out. Your note is ready for our studio team—we’ll be in touch soon.</p>
+        <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Demo only: no message was sent. Thanks for trying the form.</p>
       </form>
     </section>
   </main>
