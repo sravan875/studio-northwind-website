@@ -44,7 +44,7 @@ Then visit `http://localhost:8000`.
 
 ## Lighthouse results
 
-The requested Lighthouse audits have not yet been run in this environment. No scores are reported as measured results.
+The requested Lighthouse audits could not be run in this environment: Chrome is available, but the Node.js/Lighthouse CLI runtime is not installed, and downloading the temporary runtime did not complete. No scores are reported as measured results. Run the audits in Chrome DevTools as described below and replace the table values with the resulting scores.
 
 | Page | Device | Performance | Accessibility | Best Practices | SEO |
 |---|---|---:|---:|---:|---:|
@@ -54,6 +54,13 @@ The requested Lighthouse audits have not yet been run in this environment. No sc
 | `work.html` | Desktop | Not run | Not run | Not run | Not run |
 | `contact.html` | Mobile | Not run | Not run | Not run | Not run |
 | `contact.html` | Desktop | Not run | Not run | Not run | Not run |
+
+## Run Lighthouse
+
+1. Start the local server as described above.
+2. Open `http://localhost:8000` in Chrome.
+3. Open Developer Tools → **Lighthouse**, choose Mobile or Desktop and the categories to audit, then select **Analyze page load**.
+4. Repeat for `index.html`, `work.html` and `contact.html`, and enter the scores in the table above.
 
 ## Deploy on GitHub Pages
 
