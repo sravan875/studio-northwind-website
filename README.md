@@ -129,6 +129,117 @@ The form requires a name, valid email, service, budget, project description of a
 
 **The form only validates and displays feedback. It does not store submissions, send email, or connect to an external form service.** No enquiry is delivered to an inbox. The displayed email (`hello@studionorthwind.example`), address, and phone number are fictional placeholders and must be replaced with approved real contact details before public deployment.
 
+## How to Install, Open and Run the Project
+
+Follow these steps to download the project, open it in Visual Studio Code, and run it locally.
+
+### 1. Prerequisites
+
+You will need:
+
+- A computer running Windows, macOS, or Linux.
+- Python 3 installed to run the recommended local HTTP server.
+- A modern web browser, such as Chrome, Edge, or Firefox.
+- Git only if you choose to clone the project from GitHub.
+
+Node.js, npm, React, and a database are **not required**. This is a static website built with HTML, CSS, and vanilla JavaScript.
+
+### 2. Download the project from GitHub
+
+To download a ZIP archive:
+
+1. Open the [Studio Northwind GitHub repository](https://github.com/sravan875/studio-northwind-website).
+2. Select the green **Code** button.
+3. Select **Download ZIP**.
+4. Extract the downloaded ZIP file.
+5. Open the extracted `studio-northwind-website` folder in VS Code.
+
+Alternatively, if Git is installed, clone the repository from a terminal:
+
+```sh
+git clone https://github.com/sravan875/studio-northwind-website.git
+cd studio-northwind-website
+```
+
+### 3. Open the project in VS Code
+
+1. Open Visual Studio Code.
+2. Select **File → Open Folder**.
+3. Choose the `studio-northwind-website` folder you extracted or cloned.
+4. Confirm that files such as `index.html`, `style.css`, `main.js`, and `README.md` appear in the Explorer.
+
+### 4. Run the website locally on Windows
+
+Open a PowerShell terminal in VS Code (**Terminal → New Terminal**) and run:
+
+```powershell
+cd D:\path\to\studio-northwind-website
+py --version
+py -m http.server 8000
+```
+
+Replace `D:\path\to\studio-northwind-website` with the actual location of your project folder. The server runs in that terminal; leave it open while using the site.
+
+If `py` is not available but Python is installed, try:
+
+```powershell
+python --version
+python -m http.server 8000
+```
+
+### 5. Open the website in a browser
+
+After the server starts, open the [Home page](http://localhost:8000/index.html) in your browser. The other pages and project case studies are available at:
+
+- Home: [http://localhost:8000/index.html](http://localhost:8000/index.html)
+- About: [http://localhost:8000/about.html](http://localhost:8000/about.html)
+- Services: [http://localhost:8000/services.html](http://localhost:8000/services.html)
+- Work: [http://localhost:8000/work.html](http://localhost:8000/work.html)
+- Contact: [http://localhost:8000/contact.html](http://localhost:8000/contact.html)
+
+Project case studies:
+
+- Field Notes: [http://localhost:8000/project.html?id=field-notes](http://localhost:8000/project.html?id=field-notes)
+- Common Ground: [http://localhost:8000/project.html?id=common-ground](http://localhost:8000/project.html?id=common-ground)
+- Stillform: [http://localhost:8000/project.html?id=stillform](http://localhost:8000/project.html?id=stillform)
+- Goodweather: [http://localhost:8000/project.html?id=goodweather](http://localhost:8000/project.html?id=goodweather)
+- Openhouse: [http://localhost:8000/project.html?id=openhouse](http://localhost:8000/project.html?id=openhouse)
+- Blue Hour: [http://localhost:8000/project.html?id=bluehour](http://localhost:8000/project.html?id=bluehour)
+
+### 6. Stop the local server
+
+Return to the PowerShell terminal where the server is running and press **Ctrl + C**.
+
+### 7. Troubleshooting
+
+- **Python command not recognized:** Install Python 3 and ensure it is available on your `PATH`. On Windows, try the `py` launcher first; if that is unavailable, try `python`. Close and reopen the terminal after installation.
+- **Port 8000 is already in use:** Start the server on another port with `py -m http.server 8001`, then open [http://localhost:8001](http://localhost:8001).
+- **The browser shows a directory listing:** The server may have been started from the wrong folder. Stop it with **Ctrl + C**, open the `studio-northwind-website` project folder in the terminal, and start the server again. You can also open `/index.html` directly in the address bar.
+- **Project images do not load:** The portfolio and team images are external Picsum placeholders. Check your internet connection; the local pages can still open without it, but those images need network access.
+- **JavaScript module errors when opening an HTML file with `file://`:** Run the site through the local HTTP server instead. ES modules are subject to browser origin restrictions when pages are opened directly from disk, while the local server gives the pages an HTTP origin and lets their module imports load correctly.
+
+### 8. Main project files
+
+| File | Purpose |
+|---|---|
+| `index.html` | Home page |
+| `about.html` | About page |
+| `services.html` | Services page |
+| `work.html` | Portfolio and project filters |
+| `project.html` | Reusable project case-study page |
+| `projects.js` | Centralized project content |
+| `project.js` | Project rendering and gallery behavior |
+| `work.js` | Portfolio cards and filters |
+| `main.js` | Shared navigation and footer year |
+| `contact.js` | Contact form validation |
+| `contact.css` | Contact page styling |
+| `reveal.js` | Scroll reveal behavior |
+| `style.css` | Shared website styling |
+
+### 9. Important clarification
+
+This is a **frontend-only static website**. No backend setup or database configuration is needed. The contact form is a demonstration: it validates entries and displays feedback, but does not send or store actual enquiries. Internet access is needed to load the external Picsum placeholder images.
+
 ## Local installation, execution, and case-study testing
 
 No dependencies or build tools are required. Because the site uses ES modules, use a local HTTP server rather than opening the pages directly with `file://`:
